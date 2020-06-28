@@ -4,8 +4,11 @@
 #
 ################################################################################
 
-DOMOTICZ_VERSION = 2020.1
-DOMOTICZ_SITE = $(call github,domoticz,domoticz,$(DOMOTICZ_VERSION))
+DOMOTICZ_VERSION = development
+DOMOTICZ_SITE_METHOD = git
+DOMOTICZ_SITE = https://github.com/domoticz/domoticz.git
+#DOMOTICZ_SITE = /home/kaushik/git/domoticz
+DOMOTICZ_GIT_SUBMODULES = YES
 DOMOTICZ_LICENSE = GPL-3.0
 DOMOTICZ_LICENSE_FILES = License.txt
 DOMOTICZ_DEPENDENCIES = \
@@ -17,7 +20,8 @@ DOMOTICZ_DEPENDENCIES = \
 	mosquitto \
 	openssl \
 	sqlite \
-	zlib
+	zlib \
+	minizip
 
 # Disable precompiled header as it needs cmake >= 3.16
 DOMOTICZ_CONF_OPTS = -DUSE_PRECOMPILED_HEADER=OFF
@@ -34,7 +38,8 @@ DOMOTICZ_CONF_OPTS += \
 	-DUSE_BUILTIN_JSONCPP=OFF \
 	-DUSE_BUILTIN_LUA=OFF \
 	-DUSE_BUILTIN_SQLITE=OFF \
-	-DUSE_BUILTIN_MQTT=OFF
+	-DUSE_BUILTIN_MQTT=OFF \
+	-DUSE_BUILTIN_MINIZIP=OFF
 
 ifeq ($(BR2_PACKAGE_LIBUSB),y)
 DOMOTICZ_DEPENDENCIES += libusb

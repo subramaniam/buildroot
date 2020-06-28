@@ -1,0 +1,26 @@
+From 07f3059adefcd899e21e4683bfdfc9bfea68d273 Mon Sep 17 00:00:00 2001
+From: Subramaniam Chanderashekarapuram <c.a.subramaniam@gmail.com>
+Date: Wed, 24 Jun 2020 18:20:16 -0400
+Subject: [PATCH] build master for now
+
+Signed-off-by: Subramaniam Chanderashekarapuram <c.a.subramaniam@gmail.com>
+---
+ main/appversion.h | 2 +-
+ 1 file changed, 1 insertion(+), 1 deletion(-)
+
+diff --git a/main/appversion.h b/main/appversion.h
+index 980fe863a..ba5eb3476 100644
+--- a/main/appversion.h
++++ b/main/appversion.h
+@@ -1,7 +1,7 @@
+ #pragma once
+ #include "../appversion.h"
+ 
+-//#define BUILD_MASTER
++#define BUILD_MASTER
+ 
+ #define VERSION_MAJOR               2020
+ #define VERSION_MINOR               2
+-- 
+2.17.1
+

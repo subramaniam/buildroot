@@ -4,7 +4,7 @@
 #
 ################################################################################
 
-OPENZWAVE_VERSION = 62444b0f979c337d2091d77d89cf63c2ae9775cf
+OPENZWAVE_VERSION = Dev
 OPENZWAVE_SITE = $(call github,OpenZWave,open-zwave,$(OPENZWAVE_VERSION))
 OPENZWAVE_LICENSE = LGPL-3.0+, GPL-3.0 (examples), Apache-2.0 (sh2ju.sh)
 OPENZWAVE_LICENSE_FILES = LICENSE licenses/license.txt licenses/lgpl.txt \

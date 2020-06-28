@@ -1,0 +1,68 @@
+From af5ea35a6a631172e913103114edc65b3562a4ba Mon Sep 17 00:00:00 2001
+From: Subbu Chanderashekarapuram <c.a.subramaniam@gmail.com>
+Date: Sun, 28 Jun 2020 00:59:01 -0400
+Subject: [PATCH] fixup minizip path for use with external minizip package
+
+Signed-off-by: Subbu Chanderashekarapuram <c.a.subramaniam@gmail.com>
+---
+ main/clx_unzip.h              | 2 +-
+ main/unzip_iterator.h         | 2 +-
+ main/unzip_stream.h           | 2 +-
+ webserver/request_handler.hpp | 2 +-
+ 4 files changed, 4 insertions(+), 4 deletions(-)
+
+diff --git a/main/clx_unzip.h b/main/clx_unzip.h
+index ff2d85a1f..fd2073f66 100644
+--- a/main/clx_unzip.h
++++ b/main/clx_unzip.h
+@@ -40,7 +40,7 @@
+ #include <ios>
+ //#include "config.h"
+ //#include "shared_ptr.h"
+-#include <minizip/unzip.h>
++#include <unzip.h>
+ #include <boost/shared_ptr.hpp>
+ 
+ #ifdef CLX_ENABLE_AUTOLINK
+diff --git a/main/unzip_iterator.h b/main/unzip_iterator.h
+index f7d755cc4..a16fbab25 100644
+--- a/main/unzip_iterator.h
++++ b/main/unzip_iterator.h
+@@ -38,7 +38,7 @@
+ //#include "config.h"
+ #include <iterator>
+ #include <string>
+-#include <minizip/unzip.h>
++#include <unzip.h>
+ #include <zlib.h>
+ #include "unzip_stream.h"
+ 
+diff --git a/main/unzip_stream.h b/main/unzip_stream.h
+index 136fcefd9..b9893cb7b 100644
+--- a/main/unzip_stream.h
++++ b/main/unzip_stream.h
+@@ -39,7 +39,7 @@
+ #include <cstring>
+ #include <string>
+ #include <istream>
+-#include <minizip/unzip.h>
++#include <unzip.h>
+ 
+ namespace clx {
+ 	/* --------------------------------------------------------------------- */
+diff --git a/webserver/request_handler.hpp b/webserver/request_handler.hpp
+index 8ddc027cf..73993b20d 100644
+--- a/webserver/request_handler.hpp
++++ b/webserver/request_handler.hpp
+@@ -14,7 +14,7 @@
+ #include <string>
+ #include "../main/Noncopyable.h"
+ #ifndef WEBSERVER_DONT_USE_ZIP
+-	#include <minizip/unzip.h>
++	#include <unzip.h>
+ 	#define USEWIN32IOAPI
+ 	#include <iowin32.h>
+ #endif
+-- 
+2.17.1
+

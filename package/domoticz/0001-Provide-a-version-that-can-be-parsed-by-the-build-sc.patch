@@ -1,0 +1,23 @@
+From 207d07d90c81c6b574c2ddcb7fba6dd52f8af326 Mon Sep 17 00:00:00 2001
+From: Subbu Chanderashekarapuram <c.a.subramaniam@gmail.com>
+Date: Sat, 27 Jun 2020 22:02:04 -0400
+Subject: [PATCH] Provide a version that can be parsed by the build scripts
+
+Signed-off-by: Subbu Chanderashekarapuram <c.a.subramaniam@gmail.com>
+---
+ History.txt | 2 +-
+ 1 file changed, 1 insertion(+), 1 deletion(-)
+
+diff --git a/History.txt b/History.txt
+index 9e8d2f47e..20104f12e 100644
+--- a/History.txt
++++ b/History.txt
+@@ -1,4 +1,4 @@
+-Version 2020.xxxx (xxxx)
++Version 2020.3 (Dev-WIP)
+ - Implemented: Added optional parameter 'level' to addlogmessage JSON
+ - Implemented: Allow complete IPv6 address in local network setting
+ - Implemented: Counter meter type now supports a divider
+-- 
+2.17.1
+
